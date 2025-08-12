@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Polished Creatives — Content Design & AI Strategy</title>
+  <meta name="description" content="Senior Content Designer & AI Strategist turning ideas into impact through scalable content systems, smart UX, and strategies that convert." />
+  <meta property="og:title" content="Polished Creatives — Content Design & AI Strategy" />
+  <meta property="og:description" content="Senior Content Designer & AI Strategist turning ideas into impact through scalable content systems, smart UX, and strategies that convert." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <link rel="icon" href="assets/logo.png" />
+  <style>
+    :root{
+      --brand:#6A0DAD;
+      --brand-ink:#3d0668;
+      --accent:#FF4FD8;
+      --ink:#0f0f14;
+      --muted:#6b6b76;
+      --bg:#ffffff;
+      --bg-soft:#faf7ff;
+      --card:#ffffff;
+      --radius:14px;
+      --shadow:0 8px 24px rgba(0,0,0,.08);
+      --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.35}
+    a{color:var(--brand-ink);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px}
+    header.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:3}
+    header.nav img.logo{height:38px}
+    .nav-cta a{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border-radius:10px;border:2px solid var(--brand);color:#fff;background:var(--brand);font-weight:700}
+    .hero{padding:28px 0 0;background:radial-gradient(1200px 400px at 20% -10%, #efe7ff 0%, transparent 60%)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    .badge{display:inline-block;background:var(--bg-soft);border:1px solid #ede7fb;color:var(--brand-ink);padding:8px 12px;border-radius:999px;font-weight:600;letter-spacing:.2px}
+    h1{font-size:44px;line-height:1.05;margin:18px 0 12px;color:var(--brand-ink)}
+    .sub{font-size:20px;color:#2b2b37;max-width:820px}
+    .cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-weight:700;border:2px solid var(--brand-ink);transition:transform .06s ease, box-shadow .2s ease}
+    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .btn.secondary{background:#fff;color:var(--brand-ink)}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(106,13,173,.18)}
+    .hero .image{position:relative}
+    .hero .image img{width:100%;border-radius:18px}
+    .logos{display:grid;grid-template-columns:repeat(6,minmax(100px,1fr));gap:16px;align-items:center;margin:36px 0 8px}
+    .logos img{max-width:100%;height:36px;object-fit:contain;filter:grayscale(100%);opacity:.85}
+    .section{padding:46px 0}
+    .section h2{font-size:28px;margin:0 0 8px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid #eee;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:2px 0 6px;font-size:18px}
+    .proof{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    blockquote{margin:0;padding:18px;border-left:4px solid var(--brand);background:#fafafa;border-radius:8px}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .metric{background:#f9f7ff;border:1px solid #eee;border-radius:12px;padding:16px;text-align:center}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .step{background:#fff;border:1px dashed #dfd5f5;border-radius:12px;padding:16px}
+    .cta-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:linear-gradient(90deg,var(--brand),var(--brand-ink));color:#fff;border-radius:16px;padding:20px}
+    footer{padding:28px 0 40px;color:#666}
+    .sr-only{position:absolute;left:-10000px;width:1px;height:1px;top:auto;overflow:hidden}
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr 1fr}
+      .process{grid-template-columns:1fr 1fr}
+      .proof{grid-template-columns:1fr}
+      .logos{grid-template-columns:repeat(3,1fr)}
+      .hero-inner{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      h1{font-size:34px}
+      .grid{grid-template-columns:1fr}
+      .process{grid-template-columns:1fr}
+      .metrics{grid-template-columns:1fr}
+      .logos{grid-template-columns:repeat(2,1fr)}
+    }
+  
+    .video-thumb{cursor:pointer;position:relative;background:#00000008;border-radius:12px;padding:18px;text-align:left}
+    .video-thumb .play{width:64px;height:64px;border-radius:999px;background:#ffffff;border:3px solid var(--brand);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;margin:0 auto}
+
+  
+    .video-thumb{cursor:pointer;position:relative;border-radius:12px;overflow:hidden;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.7)}
+    .video-thumb .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:999px;background:rgba(255,255,255,.9);border:3px solid var(--brand);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:var(--brand)}
+    .video-thumb .muted, .video-thumb p{padding:12px;background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));position:absolute;bottom:0;width:100%;margin:0}
+
+</style>
+</head>
+<body>
+  <header class="nav">
+    <img class="logo" src="assets/logo.png" alt="Polished Creatives logo" />
+    <div class="nav-cta">
+      <a href="mailto:createandpolish@gmail.com?subject=Project%20Inquiry%20—%20Polished%20Creatives">Start a Project</a>
+    </div>
+  </header>
+
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="badge">Polished Creatives</span>
+        <h1>Content Design + AI Strategy that Turns Ideas into Impact.</h1>
+        <p class="sub">I help brands turn messy ideas into clean journeys, scalable systems, and content engines that convert.</p>
+        <div class="cta" role="group" aria-label="Primary actions">
+          <a class="btn primary" href="https://polishedcreatives.pressfolios.com" target="_blank" rel="noopener">View Portfolio</a>
+          <a class="btn secondary" href="mailto:createandpolish@gmail.com?subject=Intro%20Call%20—%20Polished%20Creatives">Book Intro Call</a>
+        </div>
+        <div class="logos" aria-label="Trusted by">
+          <img src="assets/logos/client-1.svg" alt="Client logo 1" />
+          <img src="assets/logos/client-2.svg" alt="Client logo 2" />
+          <img src="assets/logos/client-3.svg" alt="Client logo 3" />
+          <img src="assets/logos/client-4.svg" alt="Client logo 4" />
+          <img src="assets/logos/client-5.svg" alt="Client logo 5" />
+          <img src="assets/logos/client-6.svg" alt="Client logo 6" />
+        </div>
+        <p class="muted">Trusted by teams that move fast and expect results.</p>
+      </div>
+      <div class="image">
+        <img src="assets/hero.jpg" alt="Ife Thomas, Senior Content Designer & AI Strategist" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <h2>Services</h2>
+        <p class="muted">Senior Content Design and AI Strategy engagements that make a measurable dent.</p>
+        <div class="grid" role="list">
+          <article class="card" role="listitem">
+            <h3>Content Design & UX Writing</h3>
+            <p>Flows, microcopy, IA, and end‑to‑end content systems that reduce friction and lift conversions.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>AI Content Strategy</h3>
+            <p>Use‑case roadmaps, editorial automation, and QA guardrails—efficient without the chaos.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Messaging Architecture</h3>
+            <p>Voice, tone, and modular messaging frameworks that stay consistent at scale.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>SEO + Editorial Systems</h3>
+            <p>Topic models, briefs, pillar pages, and optimization playbooks that compound.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Ad & Lifecycle Content</h3>
+            <p>Paid social, LPs, and email/SMS journeys with testing plans and creative variants.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>AI Ops & Workflow Design</h3>
+            <p>Prompt ops, templates, RAG/knowledge bases, and analytics loops to ship faster with less guesswork.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Thought Leadership</h3>
+            <p>Executive ghostwriting, keynote narratives, and research‑backed POVs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="wrap proof">
+        <div>
+          <h2>Results</h2>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:18px">
+            <article class="card" aria-label="Video testimonial: Gayle Johnson">
+              <div class="video-thumb" style="background:url('assets/testimonials/gayle-thumb.jpg') center/cover no-repeat;" role="button" tabindex="0" data-src="https://testimonial.to/share/polished-creatives/v/c407d818-2a6d-413e-a046-b89d63800bab" aria-haspopup="dialog" aria-controls="video-modal">
+                <div class="play">▶</div>
+                <div class="muted" style="margin-top:8px"><strong>Gayle Johnson</strong> — EVOLVE Life Coaching</div>
+                <p class="muted" style="margin-top:6px">“(Short pull-quote goes here.)”</p>
+              </div>
+            </article>
+            <article class="card" aria-label="Video testimonial: Kibi Anderson">
+              <div class="video-thumb" style="background:url('assets/testimonials/kibi-thumb.jpg') center/cover no-repeat;" role="button" tabindex="0" data-src="https://testimonial.to/share/polished-creatives/v/11b0238e-0696-4f99-9f6c-94d0bb4125dc" aria-haspopup="dialog" aria-controls="video-modal">
+                <div class="play">▶</div>
+                <div class="muted" style="margin-top:8px"><strong>Kibi Anderson</strong> — Life Editor Corporate Coaching</div>
+                <p class="muted" style="margin-top:6px">“Ife always ideates like a pro and executes my ideas into sharp content.”</p>
+              </div>
+            </article>
+          </div>
+          <blockquote>
+            “I had the pleasure of working with Ife at Deloitte. She was a fantastic teammate — always collaborative, open to new ideas, and eager to learn.”
+            <br><span class="muted">— Nicole Stormer, Associate Creative Director, Deloitte Digital</span>
+          </blockquote>
+          <blockquote style="margin-top:12px">
+            “I had the privilege of working with Ife on a high-profile Microsoft project and had a wonderful experience. Her writing style was on-point, she was prompt with turnaround times, and was incredibly easy to collaborate with. It was a pleasure to have her on our team and I hope to work together again!”
+            <br><span class="muted">— Kristen Barry, Producer, Indigo Slate</span>
+          </blockquote>
+          <blockquote style="margin-top:12px">
+            “Polished Creatives created an excellent bio for my business. If you’re looking for someone creative with words and writing, this is your final destination. I highly recommend.”
+            <br><span class="muted">— Wyandon Lubom, Owner, Styles By Wyandon</span>
+          </blockquote>
+          <blockquote style="margin-top:12px">
+            “Ife’s dedication to her craft is exceptional. She distills complex ideas into clear, concise language that communicates a brand’s value proposition and drives results.”
+            <br><span class="muted">— Dana, Goalsetter</span>
+          </blockquote>
+          <blockquote style="margin-top:12px">
+            “Ife created our tone and voice guide and actively collaborated across UX and Marketing to improve every user-facing flow.”
+            <br><span class="muted">— Martin Vaisieta, UX Manager, Goalsetter</span>
+          </blockquote>
+        </div>
+        <div>
+          <h2 class="sr-only">Key metrics</h2>
+          <div class="metrics">
+            <div class="metric"><strong>15+ yrs</strong><br><span class="muted">30+ brands</span></div>
+            <div class="metric"><strong>Up to 30%</strong><br><span class="muted">conversion lift</span></div>
+            <div class="metric"><strong>40–60%</strong><br><span class="muted">faster publishing</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accessible modal for videos -->
+      <div id="video-modal" role="dialog" aria-modal="true" aria-label="Testimonial video" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);align-items:center;justify-content:center;padding:20px">
+        <div style="max-width:960px;width:100%;background:#000;border-radius:12px;position:relative">
+          <button id="video-close" aria-label="Close video" style="position:absolute;right:8px;top:8px;background:#fff;border:none;border-radius:6px;padding:6px 10px;cursor:pointer;font-weight:700">Close</button>
+          <div style="position:relative;padding-top:56.25%">
+            <iframe id="video-frame" src="" title="Testimonial video" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="wrap">
+        <h2>How we work</h2>
+        <div class="process">
+          <div class="step"><strong>1) Audit & Align</strong><br>Goals, signals, constraints.</div>
+          <div class="step"><strong>2) Design & Prototype</strong><br>Content models, flows, prompts.</div>
+          <div class="step"><strong>3) Ship & Measure</strong><br>Experiments, dashboards.</div>
+          <div class="step"><strong>4) Scale</strong><br>Playbooks, training, governance.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="cta-bar" role="region" aria-label="Final call to action">
+        <div>
+          <strong style="font-size:18px">Ready to ship cleaner content and smarter systems?</strong><br />
+          Let’s make your next release your best release.
+        </div>
+        <div class="actions">
+          <a class="btn secondary" href="https://polishedcreatives.pressfolios.com" target="_blank" rel="noopener">View Portfolio</a>
+          <a class="btn primary" href="mailto:createandpolish@gmail.com?subject=Project%20Inquiry%20—%20Polished%20Creatives">Start a Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="muted">Seattle, WA • <a href="mailto:createandpolish@gmail.com">createandpolish@gmail.com</a></div>
+      <div class="muted" style="margin-top:6px">© <span id="y"></span> Polished Creatives</div>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  </footer>
+
+  <script>
+    (function(){
+      const modal = document.getElementById('video-modal');
+      const frame = document.getElementById('video-frame');
+      const closeBtn = document.getElementById('video-close');
+      document.querySelectorAll('.video-thumb').forEach(el=>{
+        function open(){
+          frame.src = el.getAttribute('data-src');
+          modal.style.display = 'flex';
+          closeBtn.focus();
+        }
+        el.addEventListener('click', open);
+        el.addEventListener('keypress', (e)=>{ if(e.key==='Enter' || e.key===' ') { e.preventDefault(); open(); }});
+      });
+      function close(){
+        modal.style.display = 'none';
+        frame.src = '';
+      }
+      closeBtn.addEventListener('click', close);
+      modal.addEventListener('click', (e)=>{ if(e.target===modal) close(); });
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.style.display==='flex') close(); });
+    })();
+  </script>
+
+</body>
+</html>
